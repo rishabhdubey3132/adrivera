@@ -138,11 +138,11 @@ const PANEL =
 const RIM =
   'pointer-events-none absolute inset-0 z-[3] rounded-[inherit] [box-shadow:inset_0_0_0_1px_var(--cn-edge),inset_0_1px_0_var(--cn-highlight)]';
 const BAR =
-  'relative z-[2] box-border grid h-[var(--cn-bar)] grid-cols-[1fr_auto_1fr] items-center px-[var(--cn-inset)] group-data-[narrow]/cn:grid-cols-[auto_1fr_auto]';
+  'relative z-[2] box-border flex items-center justify-between h-[var(--cn-bar)] px-2 sm:px-[var(--cn-inset)] gap-1.5 sm:gap-2';
 const MENU_CONTAINER =
-  'inline-flex items-center gap-2 justify-self-start group-data-[narrow]/cn:col-[3] group-data-[narrow]/cn:row-[1] group-data-[narrow]/cn:justify-self-end';
+  'inline-flex items-center gap-1.5 shrink-0';
 const MENU =
-  'inline-flex h-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] cursor-pointer items-center gap-[10px] rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] border border-border/60 pl-[16px] pr-[14px] [background:rgba(255,255,255,0.06)] [font-family:inherit] [font-size:inherit] font-semibold text-[var(--cn-text)] outline-none transition-[background-color,border-color] duration-200 ease-[ease] hover:[background:var(--cn-hover)] hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)] data-[icon-only]:w-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] data-[icon-only]:justify-center data-[icon-only]:p-0';
+  'inline-flex h-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] cursor-pointer items-center gap-[6px] sm:gap-[10px] rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] border border-border/60 pl-[10px] pr-[8px] sm:pl-[16px] sm:pr-[14px] [background:rgba(255,255,255,0.06)] [font-family:inherit] text-xs sm:text-[14px] font-semibold text-[var(--cn-text)] outline-none transition-[background-color,border-color] duration-200 ease-[ease] hover:[background:var(--cn-hover)] hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)] data-[icon-only]:w-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] data-[icon-only]:justify-center data-[icon-only]:p-0';
 const BURGER = 'relative h-[12px] w-[18px]';
 const LINE_TOP =
   'absolute left-0 top-[2.25px] h-[1.5px] w-full rounded-[2px] bg-current transition-[top,rotate] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[open]/cn:top-[5.25px] group-data-[open]/cn:rotate-45 motion-reduce:transition-none';
@@ -154,9 +154,9 @@ const WORD_OPEN =
 const WORD_CLOSE =
   '[grid-area:1/1] translate-y-[110%] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[open]/cn:translate-y-0 motion-reduce:transition-none';
 const LOGO =
-  'inline-flex h-[var(--cn-logo)] items-center justify-self-center text-[var(--cn-text)] no-underline outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)] group-data-[narrow]/cn:col-[1] group-data-[narrow]/cn:row-[1] group-data-[narrow]/cn:justify-self-start group-data-[narrow]/cn:pl-[14px]';
+  'inline-flex h-[var(--cn-logo)] items-center justify-center text-[var(--cn-text)] no-underline outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)] px-1 sm:px-2 shrink-0';
 const CTA =
-  'inline-flex h-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] justify-self-end cursor-pointer items-center justify-center whitespace-nowrap rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] border-0 px-[18px] [background:var(--cn-cta)] [box-shadow:var(--cn-cta-shadow)] [font-family:inherit] [font-size:inherit] font-semibold text-[var(--cn-cta-ink)] no-underline outline-none transition-all duration-200 ease-[ease] hover:[filter:var(--cn-cta-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)]';
+  'inline-flex h-[calc(var(--cn-bar)_-_var(--cn-inset)*2)] cursor-pointer items-center justify-center whitespace-nowrap rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] border-0 px-[10px] sm:px-[18px] text-xs sm:text-[14px] [background:var(--cn-cta)] [box-shadow:var(--cn-cta-shadow)] [font-family:inherit] font-semibold text-[var(--cn-cta-ink)] no-underline outline-none transition-all duration-200 ease-[ease] hover:[filter:var(--cn-cta-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)] shrink-0';
 const CTA_WIDE =
   'flex h-[44px] w-full cursor-pointer items-center justify-center whitespace-nowrap rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] border-0 px-[16px] [background:var(--cn-cta)] [box-shadow:var(--cn-cta-shadow)] [font-family:inherit] [font-size:inherit] font-semibold text-[var(--cn-cta-ink)] no-underline outline-none transition-all duration-200 ease-[ease] hover:[filter:var(--cn-cta-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cn-ring)]';
 const CONTENT =
@@ -201,7 +201,7 @@ const DEFAULT_ITEMS: CardNavItem[] = [
     label: 'Contact',
     description: 'Sidha WhatsApp par humse baat karein.',
     links: [
-      { label: 'WhatsApp Chat', href: 'https://wa.me/918815512459' },
+      { label: 'WhatsApp Chat', href: 'https://wa.me/917974291582' },
       { label: 'About Agency', href: '/about' },
       { label: 'Enquiry Form', href: '/contact' }
     ]
@@ -296,10 +296,28 @@ export function CardNav({
   } catch {
     // If used outside ThemeProvider
   }
-  const activeTheme = themeProp ?? themeContext?.resolvedTheme ?? 'light';
-  const palette = THEMES[activeTheme] ?? THEMES.light;
+
+  const [domDark, setDomDark] = useState<boolean>(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark';
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const checkDark = () => {
+      const isDark = document.documentElement.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark';
+      setDomDark(isDark);
+    };
+    checkDark();
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] });
+    return () => observer.disconnect();
+  }, []);
+
   const vars: Record<string, string> = {
-    ...palette,
+    ...(themeProp ? THEMES[themeProp] : {}),
     '--cn-max': `${maxWidth}px`,
     '--cn-bar': '60px',
     '--cn-inset': '8px',
@@ -310,7 +328,6 @@ export function CardNav({
   };
   if (surface === 'glass') vars['--cn-blur'] = 'blur(20px) saturate(1.6)';
   if (surface === 'solid') {
-    vars['--cn-panel'] = palette['--cn-solid'];
     vars['--cn-blur'] = 'none';
   }
   if (accentColor) {
@@ -531,12 +548,20 @@ export function CardNav({
           if (wide) setOpen(false);
         }
       },
-      target.label
+      wide ? (
+        target.label
+      ) : (
+        <>
+          <span className="hidden sm:inline">{target.label}</span>
+          <span className="inline sm:hidden">Plans</span>
+        </>
+      )
     );
 
   return (
     <div
       ref={rootRef}
+      suppressHydrationWarning
       className={[ROOT, className].filter(Boolean).join(' ')}
       data-open={open ? '' : undefined}
       data-shown={shown || open ? '' : undefined}
@@ -548,7 +573,6 @@ export function CardNav({
       <nav ref={panelRef} className={PANEL} aria-label={ariaLabel}>
         <div ref={barRef} className={BAR}>
           <div className={MENU_CONTAINER}>
-            {narrow && <ThemeToggle size="sm" />}
             <button
               ref={menuRef}
               type="button"
@@ -582,9 +606,9 @@ export function CardNav({
             </LinkComponent>
           )}
 
-          <div className="flex items-center gap-2 justify-self-end group-data-[narrow]/cn:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2 justify-self-end">
             <ThemeToggle size="sm" />
-            {cta && !narrow && ctaButton(cta, false)}
+            {cta && ctaButton(cta, false)}
           </div>
         </div>
 
@@ -632,16 +656,18 @@ export function CardNav({
               </div>
             ))}
           </div>
-          {cta && narrow && (
+          {cta && (
             <div
               ref={element => {
                 cardRefs.current[items.length] = element;
               }}
               className="flex flex-col gap-2.5 pt-1"
             >
-              {ctaButton(cta, true)}
+              <div className="sm:hidden">
+                {ctaButton(cta, true)}
+              </div>
               <div className="flex items-center justify-between px-3.5 py-2.5 border border-border/70 rounded-[calc(var(--cn-radius)_-_var(--cn-inset))] bg-[var(--cn-tile)] text-xs font-mono">
-                <span className="text-[var(--cn-muted)] font-medium">Theme</span>
+                <span className="text-[var(--cn-muted)] font-medium">Theme Mode</span>
                 <ThemeToggle variant="segmented" />
               </div>
             </div>

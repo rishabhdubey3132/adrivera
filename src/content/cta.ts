@@ -10,6 +10,6 @@ export const finalCtaData = {
   },
   secondaryCta: {
     label: 'WhatsApp Par Baat Karein',
-    href: 'https://wa.me/918815512459?text=Namaste%20ADrivera%20team%2C%20main%20apne%20business%20ke%20liye%20Meta%20Ads%20ke%20baare%20mein%20baat%20karna%20chahta%20hoon.',
+    href: 'https://wa.me/917974291582?text=Namaste%20ADrivera%20team%2C%20main%20apne%20business%20ke%20liye%20Meta%20Ads%20ke%20baare%20mein%20baat%20karna%20chahta%20hoon.',
   },
 };

@@ -41,7 +41,7 @@ export interface SiteContent {
 export const siteContent: SiteContent = {
   brandName: 'ADrivera',
   tagline: 'Aapke Business Mein Dum Hai, Ab Use Sahi Audience Tak Phauchane ka Kaam hamara',
-  whatsappNumber: '918815512459',
+  whatsappNumber: '917974291582',
   navLinks: [
     { label: 'Home', href: '/#home' },
     { label: 'Kyun Zaroori Hai', href: '/#what-we-do' },
@@ -73,9 +73,9 @@ export const siteContent: SiteContent = {
   verifiedStats: [],
   location: 'Bhopal, Madhya Pradesh, India',
   contact: {
-    whatsappNumberPlaceholder: '918815512459',
-    whatsappNumberFormatted: '+91 88155 12459',
-    whatsappDisplayPlaceholder: '+91 88155 12459',
+    whatsappNumberPlaceholder: '917974291582',
+    whatsappNumberFormatted: '+91 79742 91582',
+    whatsappDisplayPlaceholder: '+91 79742 91582',
     isWhatsappVerified: true,
     emailPlaceholder: 'hello@adrivera.in',
     officeLocation: 'Bhopal, Madhya Pradesh, India',

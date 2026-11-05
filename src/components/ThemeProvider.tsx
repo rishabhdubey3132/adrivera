@@ -59,7 +59,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       // Ignore localStorage errors
     }
 
-    const initialResolved = initialTheme === 'system' ? getSystemTheme() : initialTheme;
+    const docIsDark = typeof document !== 'undefined' && (document.documentElement.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark');
+    const initialResolved = initialTheme === 'system' ? (docIsDark ? 'dark' : getSystemTheme()) : initialTheme;
     setThemeState(initialTheme);
     setResolvedTheme(initialResolved);
     applyTheme(initialResolved);
@@ -107,15 +108,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
 
     const nextResolved = nextTheme === 'system' ? getSystemTheme() : nextTheme;
-    startTransition(() => {
-      setResolvedTheme(nextResolved);
-      applyTheme(nextResolved);
-    });
+    setResolvedTheme(nextResolved);
+    applyTheme(nextResolved);
   };
 
   const toggleTheme = () => {
-    // If currently dark, switch to light; if light, switch to dark
-    const next = resolvedTheme === 'dark' ? 'light' : 'dark';
+    const isCurrentlyDark = typeof document !== 'undefined'
+      ? document.documentElement.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark'
+      : resolvedTheme === 'dark';
+    const next = isCurrentlyDark ? 'light' : 'dark';
     setTheme(next);
   };
 
