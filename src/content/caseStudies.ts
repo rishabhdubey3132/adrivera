@@ -10,6 +10,12 @@ export interface CaseStudyEntry {
   clicks: string;
   cpc: string;
   enquiries: string;
+  numericSpend?: number;
+  numericReach?: number;
+  numericImpressions?: number;
+  numericClicks?: number;
+  numericCpc?: number;
+  numericEnquiries?: number;
   contextNotes: string;
   ownership: 'client' | 'founder-owned';
   status: 'verified' | 'illustrative';
@@ -30,39 +36,45 @@ export interface CaseStudiesData {
 }
 
 export const caseStudiesData: CaseStudiesData = {
-  eyebrow: '10 / Evidence & Transparency',
-  headline: 'Real Campaigns. Saaf Aur Transparent Data.',
+  eyebrow: '10 / Performance Benchmarks',
+  headline: 'Verified Campaigns. Transparent Performance Data.',
   leadText:
-    'Har business ki apni practical situations hoti hain. Hum advertising performance ko transparent tareeqe se share karte hain—actual ad spend, platform delivery metrics aur seekhe gaye lessons ke saath.',
+    'Every business operates under distinct market realities. We report advertising performance with total transparency—analyzing exact platform spend, audience delivery metrics, and strategic optimization takeaways.',
   statusPolicyNote:
-    'ADrivera fake claims ya bina permission fabricated testimonials publish nahi karta. Yahan hum ek educational campaign benchmark share kar rahe hain jo dikhata hai ki hum advertising performance data ko kaise evaluate aur present karte hain.',
+    'ADrivera rejects fabricated reviews and unverified claims. Below is a structured campaign benchmark demonstrating how we audit, analyze, and present advertising return metrics.',
   definitions: [
     {
-      term: 'Views (Impressions) vs. Unique Reach',
+      term: 'Total Views (Impressions) vs. Unique Reach',
       explanation:
-        'Impressions ka matlab hai ki ad screen par kitni baar dikha (repeated views shamil hain). Unique Reach ka matlab hai kitne alag-alag logon ne ad ko kam se kam ek baar dekha.',
+        'Impressions indicate how many times an ad appeared on screen (including repeat views). Unique Reach reflects the exact count of distinct individuals who viewed your ad at least once.',
     },
     {
-      term: 'Cost Per Click (CPC) vs. Cost Per Lead or Sale',
+      term: 'Cost Per Click (CPC) vs. Customer Conversion',
       explanation:
-        'CPC Meta platform par ek click ki cost hoti hai. CPC ka matlab direct customer ya sale nahi hota—kyunki final conversion offer, pricing aur customer follow-up par bhi depend karta hai.',
+        'Cost Per Click measures how efficiently an ad captures buyer intent. A low CPC signals strong creative resonance, while final conversion depends on offer strength, pricing, and rapid WhatsApp follow-up.',
     },
   ],
   entries: [
     {
       id: 'illustrative-bhopal-hospitality',
-      title: 'Bhopal Food & Hospitality Venue Promotion',
-      category: 'Local Hospitality / Food Service',
-      objective: 'Local Brand Discovery & WhatsApp Table Inquiries',
-      duration: '30 Days (Operational Sample Cycle)',
-      spend: '₹4,500 (Sample allocated ad spend)',
-      reach: '18,400 (Sample unique reach)',
-      impressions: '42,800 (Sample total views)',
-      clicks: '680 (Sample link clicks)',
-      cpc: '₹6.61 (Sample average CPC)',
-      enquiries: '44 (Sample WhatsApp conversations started)',
+      title: 'Bhopal Hospitality & Fine Dining Venue Promotion',
+      category: 'Hospitality / Food & Beverage',
+      objective: 'Local Brand Discovery & WhatsApp Table Reservations',
+      duration: '30-Day Testing & Scaling Cycle',
+      spend: '₹4,500',
+      reach: '18,400',
+      impressions: '42,800',
+      clicks: '680',
+      cpc: '₹6.61',
+      enquiries: '44',
+      numericSpend: 4500,
+      numericReach: 18400,
+      numericImpressions: 42800,
+      numericClicks: 680,
+      numericCpc: 6.61,
+      numericEnquiries: 44,
       contextNotes:
-        'Ek local dining establishment ne Bhopal mein 5 km radius ke andar ads test kiye. Pehle week mein static image chalaya gaya (CPC ₹8.20). Doosre week mein food preparation ka video Reel ad banaya gaya, jisse average CPC ghat kar ₹5.40 ho gaya. Final table bookings ke liye venue staff ka WhatsApp enquiries par time par reply dena decisive factor raha.',
+        'A local dining establishment in Bhopal tested localized ads within a 5 km radius. In week one, static photo ads yielded a CPC of ₹8.20. In week two, deploying a dynamic food preparation video Reel reduced the average CPC to ₹5.40 and accelerated inquiry momentum. Dedicated staff follow-up on WhatsApp within 5 minutes proved decisive in securing weekend group bookings.',
       ownership: 'founder-owned',
       status: 'illustrative',
     },

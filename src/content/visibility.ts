@@ -7,60 +7,60 @@ export interface VisibilityBenefit {
 }
 
 export const visibilityData = {
-  eyebrow: '03 / Visibility Gap',
-  headline: 'Aaj sirf achha product hona hi kaafi nahi. Sahi logon tak pahunchna bhi zaroori hai.',
+  eyebrow: '03 / The Visibility Gap',
+  headline: 'Great Products Deserve Greater Visibility. Close The Local Market Gap.',
   openingPullQuote:
-    'Aapke competitors online apni pehchaan bana rahe hain. Aap bhi apne business ko un logon tak pahunchaiye jo aapke customers ban sakte hain.',
+    'Your competitors are actively capturing digital attention every single day. Put your offering directly in front of the local customers who need it most.',
   leadText:
-    'Ho sakta hai aapka product bhi utna hi achha ho. Farak is baat se pad sakta hai ki log kis business ko jaante hain aur kis par bharosa karte hain. Walk-ins aur referrals zaroori hain, lekin Meta Ads aapke business ko un logon ke saamne laane ka kaam karta hai jo abhi aapke baare mein nahi jaante.',
+    'Word-of-mouth and traditional walk-ins are valuable, but they have natural ceilings. Meta Ads introduces your business to the vast majority of qualified customers in Bhopal and Central India who have yet to discover what you offer.',
   benefits: [
     {
       number: '01',
-      title: 'Discovery',
-      summary: 'Bhopal ke naye customers tak apna business pahunchaiye.',
-      isHinglishSummary: true,
+      title: 'Targeted Discovery',
+      summary: 'Introduce your brand to thousands of qualified local prospects.',
+      isHinglishSummary: false,
       description:
-        'Apne product ya service ko un logon ke saamne dikhaiye jo Bhopal mein rehte hain aur jinki zaroorat aap poori kar sakte hain.',
+        'Present your products directly to active social media users residing within your immediate service radius in Bhopal.',
     },
     {
       number: '02',
-      title: 'Familiarity',
-      summary: 'Potential customers aapke brand ko pehchaanein aur yaad rakhein.',
-      isHinglishSummary: true,
+      title: 'Brand Familiarity',
+      summary: 'Build top-of-mind brand recall and consumer trust across your city.',
+      isHinglishSummary: false,
       description:
-        'Facebook aur Instagram feeds aur Reels par lagataar dikhne se logon ke dimaag mein aapke business ki ek pehchaan banti hai.',
+        'Consistent, high-impact visibility across Instagram Reels and Facebook feeds turns casual scrollers into familiar, trusting prospects.',
     },
     {
       number: '03',
-      title: 'Action',
-      summary: 'Interested logon ko seedha WhatsApp ya call par connect kijiye.',
-      isHinglishSummary: true,
+      title: 'Immediate Action',
+      summary: 'Convert attention into direct 1-on-1 customer conversations.',
+      isHinglishSummary: false,
       description:
-        'Clear calls-to-action ke saath interested customers aasaani se aapse WhatsApp ya call par contact kar sakte hain.',
+        'Strategic calls-to-action prompt interested customers to initiate inquiries directly on WhatsApp or call your business immediately.',
     },
   ] as VisibilityBenefit[],
-  closingLine: 'Achha business hona zaroori hai, par logon ko uske baare mein pata hona bhi zaroori hai.',
+  closingLine: 'A remarkable product without visibility is like a diamond in the dark. Let your city discover what you offer.',
   qualificationNote:
-    'Har business ka advertising goal alag hota hai. Restaurant local footfall aur orders chahta hai, clinic ya coaching quality enquiries chahti hai, aur retail store naye customers. Hum har campaign ko business ki zaroorat ke hisaab se customize karte hain.',
+    'Every business possesses unique advertising priorities. A restaurant seeks weekend dining reservations, a clinic seeks patient consultations, and a retail store seeks local store visits. We engineer every campaign around your exact commercial intent.',
 };
 
 export const brandBuildingData = {
-  eyebrow: '04 / Brand Building',
-  headline: 'Business aur brand mein farak sirf product ka nahi, pehchaan ka bhi hota hai.',
-  leadLine: 'Sirf business mat chalao, apna brand banao.',
+  eyebrow: '04 / Brand Equity',
+  headline: 'The Difference Between a Local Shop and an Iconic Brand is Mindshare.',
+  leadLine: 'Do not just operate a business—build an enduring regional brand.',
   paragraphs: [
-    'Ek hi market mein kai businesses similar products aur services offer karte hain. Lekin kuch businesses zyada logon ko yaad rehte hain, kyunki unki pehchaan aur visibility strong hoti hai.',
-    'Facebook aur Instagram Ads aapke business ko naye logon tak pahunchane aur aapki brand recognition badhane mein madad kar sakte hain. Aapka product achha hai, toh ab use sahi audience ke saamne laane ki direction mein kaam kijiye.',
+    'In any competitive market, multiple vendors offer similar products and services. Yet only a handful command customer preference and pricing power—because their market visibility is consistent, professional, and trusted.',
+    'Targeted Facebook and Instagram advertising transforms you from an occasional choice into the definitive go-to destination in your city. Elevate your presence and claim your rightful market share.',
   ] as string[],
-  opportunityIntro: 'Aaj local ho, kal apne sheher ka jaana-maana brand banne ki direction mein badho.',
+  opportunityIntro: 'Transform your local footprint into your city’s most recognizable brand.',
   opportunities: [
-    'Apne sheher mein ek jaani-pehchaani brand identity banayein.',
-    'Apne products aur services ko professionally present karein.',
-    'Relevant audience ke saamne consistently visible rahein.',
-    'Naye offers, products ya branches ko shandaar reach ke saath launch karein.',
-    'Dekhiye kaise behtar pehchaan aapke business ko premium positioning de sakti hai.',
+    'Cultivate an authoritative, premium brand identity across Central India.',
+    'Showcase your offerings with modern, high-definition visual storytelling.',
+    'Maintain steady, consistent mindshare with relevant local audiences.',
+    'Launch seasonal campaigns, new collections, or branch openings with maximum reach.',
+    'Command superior pricing power and customer loyalty through recognized authority.',
   ] as string[],
-  pullStatement: 'Aapka business. Aapki pehchaan. Aapka brand.',
+  pullStatement: 'Your Vision. Your Offering. Your Enduring Brand.',
   qualification:
-    'Advertising aapke brand ki reach badha sakti hai, lekin customer loyalty, product quality aur sahi pricing business owner ki taaqat hoti hai. Hum agreed advertising work aur transparent reporting par focus karte hain.',
+    'Advertising amplifies your brand reach, while product excellence and customer service sustain enduring loyalty. We focus on strategic ad execution and verified performance reporting.',
 };

@@ -9,13 +9,13 @@ export interface ProofContent {
 }
 
 export const proofData: ProofContent = {
-  eyebrow: '02 / Experience',
-  headline: 'Experience se seekha. Data ke saath improve karte hain.',
+  eyebrow: '02 / Proven Track Record',
+  headline: 'Grounded in Experience. Driven by Verified Data.',
   leadText:
-    'Meta Ads mein practical experience, campaign data aur local-market understanding ka use karke hum advertising decisions ko business goals ke saath align karne ki koshish karte hain.',
-  simplerStatement: 'Practical Meta Ads experience aur Bhopal market ki understanding.',
+    'Combining hands-on Meta Ads technical expertise, verified campaign delivery data, and an intimate understanding of the Bhopal market, we align your ad spend directly with measurable commercial objectives.',
+  simplerStatement: 'Demonstrated Meta Ads performance with deep Central India market insight.',
   claimsNotice:
-    'Commercial Claims Policy: ADrivera unverified metrics ya fake 10x claims display nahi karta. Hum genuine campaign data aur realistic reporting par focus karte hain.',
+    'Commercial Transparency Policy: ADrivera rejects unsubstantiated claims and fabricated return multiples. We focus exclusively on verified platform data, genuine reach, and realistic performance benchmarks.',
 };
 
 export { getRenderableStats };

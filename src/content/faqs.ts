@@ -6,87 +6,76 @@ export interface FAQItem {
 }
 
 export const faqsData = {
-  eyebrow: '12 / Questions & Answers',
-  headline: 'Frequently Asked Questions — Aam Sawaal Aur Saaf Jawaab',
+  eyebrow: '12 / Clarifications & FAQs',
+  headline: 'Frequently Asked Questions — Transparent Answers',
   leadText:
-    'Packages, ad spend, creative deliverables aur campaign process ke baare mein business owners ke zaroori sawaal.',
+    'Key questions from business owners regarding budgets, ad spend allocation, creative deliverables, and campaign timelines.',
   items: [
     {
       id: 'faq-1',
-      question: 'Kya ₹5,000 mein ad spend bhi included hai?',
+      question: 'Is Meta ad spend included in the ₹5,000 Starter Plan?',
       answer:
-        'Haan. Starter plan ka total monthly price ₹5,000 hai. Campaign scope, budget allocation aur service deliverables purchase se pehle clearly discuss kiye jate hain. Koi hidden fee nahi hai.',
-      lang: 'hi-Latn',
+        'Yes. The Starter Plan is an all-inclusive monthly package for ₹5,000. Campaign scope, ad spend allocation, and deliverables are transparently finalized prior to launch. There are zero hidden setup costs or agency surcharges.',
     },
     {
       id: 'faq-2',
-      question: 'Kya sales guaranteed hain?',
+      question: 'Are sales or inquiries guaranteed?',
       answer:
-        'Nahi. Hum advertising campaign ko professionally manage karte hain, lekin sales product, pricing, offer, competition aur customer experience jaise factors par bhi depend karti hain.',
-      lang: 'hi-Latn',
+        'No agency can ethically guarantee fixed sales. We guarantee professional campaign architecture, verified targeting, compelling creatives, and transparent reporting. Final conversion depends on offer strength, pricing, and prompt inquiry response.',
     },
     {
       id: 'faq-3',
-      question: 'Agar maine pehle kabhi ads nahi chalaye toh?',
+      question: 'What if our business has never run digital ads before?',
       answer:
-        'Bilkul shuru kar sakte hain. Starter plan un businesses ke liye hai jo pehli baar Meta Ads try karna chahte hain aur ek chhote budget ke saath actual performance dekhna chahte hain.',
-      lang: 'hi-Latn',
+        'The Starter Plan is designed specifically for first-time advertisers. It allows you to test the waters with a predictable, low-risk budget, review real platform metrics, and build confidence before scaling your marketing budget.',
     },
     {
       id: 'faq-4',
-      question: 'Agar mujhe zyada advertising chahiye toh?',
+      question: 'What if we require higher ad spend or multi-city reach?',
       answer:
-        'Aap Growth, Premium ya Custom plan ke options discuss kar sakte hain. Sahi plan aapke goals aur requirements par depend karega.',
-      lang: 'hi-Latn',
+        'You can seamlessly upgrade to our Growth, Premium, or bespoke Custom packages. We will evaluate your multi-city objectives and configure an advanced multi-stage funnel tailored to your expansion targets.',
     },
     {
       id: 'faq-5',
-      question: 'Kya aap mere business ke liye ads chala sakte hain?',
+      question: 'Can you run ads for my specific business category?',
       answer:
-        'Apne business, location aur goal ke baare mein batayiye. Hum evaluate karenge ki kaunsa campaign approach suitable ho sakta hai.',
-      lang: 'hi-Latn',
+        'Yes. We have executed campaigns across retail, dining, healthcare clinics, educational coaching, real estate, and professional local services. Share your business profile with us to review relevant campaign frameworks.',
     },
     {
       id: 'faq-6',
-      question: 'Kaunse platforms par ads chalenge?',
+      question: 'Which platforms and placements will our ads run on?',
       answer:
-        'Hum primarily Facebook aur Instagram par Meta Ads Manager ke through campaigns run karte hain, aur jahan relevant ho wahan direct WhatsApp enquiry destinations set up karte hain.',
-      lang: 'hi-Latn',
+        'We run campaigns natively on Facebook and Instagram using Meta Ads Manager. Placements include high-impact 4:5 Feed posts, 9:16 vertical Stories, and short-form video Reels, with direct routing to your business WhatsApp.',
     },
     {
       id: 'faq-7',
-      question: 'Kya aap video ads bhi banate hain?',
+      question: 'Do you produce vertical video Reel ads?',
       answer:
-        'Haan, AI-assisted video reels Growth aur higher packages mein included hain. Starter plan static ad banners aur single primary creatives ke liye hota hai.',
-      lang: 'hi-Latn',
+        'Yes, AI-assisted video Reel ads are included in our Growth and higher packages. The Starter Plan focuses on single primary static creatives and client-supplied visual assets.',
     },
     {
       id: 'faq-8',
-      question: 'Kya aap ads ko regularly change karenge?',
+      question: 'How frequently are ad creatives updated?',
       answer:
-        'Creative updates aapke package par depend karte hain. Starter plan mein focused single primary creative hota hai, jabki Growth aur Premium mein regular creative variations aur testing shamil rehte hain.',
-      lang: 'hi-Latn',
+        'Creative refresh frequency corresponds to your chosen plan. Starter includes a focused primary ad asset, while Growth and Premium include regular iterations and A/B variations to prevent audience ad fatigue.',
     },
     {
       id: 'faq-9',
-      question: 'Agar ads par clicks aaye lekin sales na mile toh?',
+      question: 'What happens if ads receive clicks but few purchases?',
       answer:
-        'Hum campaign data analyze karenge ki audience kahan drop ho rahi hai. Clicks alone sales guarantee nahi karte—offer, pricing aur follow-up conversation par bhi focus karna zaroori hota hai.',
-      lang: 'hi-Latn',
+        'We diagnose the complete customer journey. If click-through rates are high but inquiries lag, we analyze offer clarity, pricing perception, competitor actions, and follow-up response speed to recalibrate.',
     },
     {
       id: 'faq-10',
-      question: 'Kya aap in-person meetings provide karte hain?',
+      question: 'Do you offer in-person strategy meetings in Bhopal?',
       answer:
-        'Starter plan online (WhatsApp aur calls par) manage hota hai. Growth package mein Bhopal mein har mahine 1 in-person meeting included hai, aur Premium ya Custom plans mein zaroorat ke hisaab se meetings schedule hoti hain.',
-      lang: 'hi-Latn',
+        'Starter is managed conveniently via WhatsApp, phone, and online video calls. The Growth package includes 1 scheduled in-person strategy review per month in Bhopal, while Premium includes regular in-person alignment sessions.',
     },
     {
       id: 'faq-11',
-      question: 'Kya main apna khud ka custom budget decide kar sakta hoon?',
+      question: 'Can we configure a customized advertising budget?',
       answer:
-        'Haan bilkul. Agar aapko standard plans se alag budget ya customized advertising support chahiye, toh hum aapke goals ke hisaab se Custom plan discuss kar sakte hain.',
-      lang: 'hi-Latn',
+        'Yes. For businesses with specialized objectives, multi-location requirements, or budgets exceeding standard tiers, we formulate bespoke Custom plans with tailored creative and reporting schedules.',
     },
   ] as FAQItem[],
 };

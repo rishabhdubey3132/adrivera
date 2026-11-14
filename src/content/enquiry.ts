@@ -4,29 +4,29 @@ export interface EnquiryOption {
 }
 
 export const businessCategories: EnquiryOption[] = [
-  { value: 'retail', label: 'Retail & Consumer Goods (Dukaan, Showroom, Products)' },
-  { value: 'food-hospitality', label: 'Restaurant, Cafe, Bakery & Hospitality' },
-  { value: 'healthcare-wellness', label: 'Clinic, Hospital, Dental & Wellness' },
-  { value: 'education-coaching', label: 'Coaching, Institute & Classes' },
-  { value: 'real-estate', label: 'Real Estate, Builders & Property' },
-  { value: 'professional-services', label: 'Professional & Business Services' },
-  { value: 'local-services', label: 'Local Services (Salon, Repair, Event Services)' },
-  { value: 'other', label: 'Other Local Business' },
+  { value: 'retail', label: 'Retail & Consumer Goods (Shops, Showrooms, D2C)' },
+  { value: 'food-hospitality', label: 'Restaurants, Cafes, Bakeries & Hospitality' },
+  { value: 'healthcare-wellness', label: 'Clinics, Dental Centers, Hospitals & Wellness' },
+  { value: 'education-coaching', label: 'Coaching Institutes, Academies & EdTech' },
+  { value: 'real-estate', label: 'Real Estate Builders, Projects & Commercial Properties' },
+  { value: 'professional-services', label: 'Professional & Corporate Services' },
+  { value: 'local-services', label: 'Local Services (Gyms, Salons, Event Venues)' },
+  { value: 'other', label: 'Other Commercial Venture' },
 ];
 
 export const primaryObjectives: EnquiryOption[] = [
-  { value: 'leads', label: 'Enquiries & Customer Leads Badhana' },
-  { value: 'brand-awareness', label: 'Bhopal Mein Business Ki Pehchaan (Brand Visibility)' },
-  { value: 'whatsapp-chat', label: 'Customers Se Direct WhatsApp Par Baat Karna' },
-  { value: 'offer-promotion', label: 'Naya Offer, Discount Ya Event Promote Karna' },
-  { value: 'store-visits', label: 'Dukaan, Clinic Ya Store Par Footfall Badhana' },
+  { value: 'leads', label: 'Increase Inbound Inquiries & Qualified Leads' },
+  { value: 'brand-awareness', label: 'Establish Dominant Local Brand Visibility' },
+  { value: 'whatsapp-chat', label: 'Initiate Direct WhatsApp Customer Chats' },
+  { value: 'offer-promotion', label: 'Launch New Offers, Products or Store Openings' },
+  { value: 'store-visits', label: 'Drive Physical Store Visits & Venue Footfall' },
 ];
 
 export const planOptions: EnquiryOption[] = [
-  { value: 'starter', label: 'Starter — ₹5,000/month' },
-  { value: 'growth', label: 'Growth — ₹8,000/month' },
-  { value: 'premium', label: 'Premium — ₹16,000/month (Focused Advertising Support)' },
-  { value: 'custom', label: 'Custom — ₹30,000+/month (Tailored Scope)' },
+  { value: 'starter', label: 'Starter — ₹5,000/month (Low-Risk Evaluation)' },
+  { value: 'growth', label: 'Growth — ₹8,000/month (Video Reels & Optimization)' },
+  { value: 'premium', label: 'Premium — ₹16,000/month (Full Funnel Retargeting)' },
+  { value: 'custom', label: 'Custom — ₹30,000+/month (Bespoke Enterprise Scope)' },
 ];
 
 export interface EnquiryFormData {
@@ -47,17 +47,17 @@ export function buildWhatsAppMessage(data: EnquiryFormData): string {
   const planLabel =
     planOptions.find((p) => p.value === data.preferredPlan)?.label || data.preferredPlan;
 
-  return `Namaste ADrivera Team,
+  return `Hello ADrivera Team,
 
-Main apne business ke liye Meta advertising (Facebook & Instagram) discuss karna chahta hoon. Mere details ye hain:
+I would like to explore Meta advertising (Facebook & Instagram) for my business. Here are my details:
 
 • Business Name: ${data.businessName.trim()}
 • Category: ${categoryLabel}
 • Location: ${data.location.trim()}
-• Main Goal: ${objectiveLabel}
-• Preferred Plan: ${planLabel}
+• Primary Objective: ${objectiveLabel}
+• Selected Package: ${planLabel}
 • Contact Person: ${data.contactName.trim()}
 • Phone / WhatsApp: ${data.phone.trim()}
 
-Kripya mere details review karke aage ka advertising process batayein.`;
+Please review my requirements and advise on the next steps to launch our campaign.`;
 }

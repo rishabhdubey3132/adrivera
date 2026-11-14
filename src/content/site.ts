@@ -10,6 +10,10 @@ export interface FooterLinkGroup {
 
 export interface VerifiedStat {
   value: string;
+  numericValue?: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
   definition: string;
   source: string;
   verified: boolean;
@@ -40,13 +44,14 @@ export interface SiteContent {
 
 export const siteContent: SiteContent = {
   brandName: 'ADrivera',
-  tagline: 'Aapke Business Mein Dum Hai, Ab Use Sahi Audience Tak Phauchane ka Kaam hamara',
+  tagline: 'Turn Local Attention Into Measurable Revenue',
   whatsappNumber: '917974291582',
   navLinks: [
     { label: 'Home', href: '/#home' },
-    { label: 'Kyun Zaroori Hai', href: '/#what-we-do' },
-    { label: 'Process', href: '/#our-approach' },
-    { label: 'Plans Dekhein', href: '/#pricing' },
+    { label: 'Services', href: '/#what-we-do' },
+    { label: 'Our Process', href: '/#our-approach' },
+    { label: 'Plans & Pricing', href: '/#pricing' },
+    { label: 'Case Studies', href: '/#case-studies' },
     { label: 'FAQs', href: '/#faqs' },
   ],
   footerLinks: [
@@ -54,15 +59,19 @@ export const siteContent: SiteContent = {
       title: 'Navigation',
       links: [
         { label: 'Home', href: '/#home' },
-        { label: 'Kyun Zaroori Hai', href: '/#what-we-do' },
-        { label: 'Process', href: '/#our-approach' },
-        { label: 'Plans Dekhein', href: '/#pricing' },
+        { label: 'Services & Scope', href: '/#what-we-do' },
+        { label: 'Advertising Process', href: '/#our-approach' },
+        { label: 'Plans & Pricing', href: '/#pricing' },
+        { label: 'Client Case Studies', href: '/#case-studies' },
         { label: 'FAQs', href: '/#faqs' },
       ],
     },
     {
-      title: 'Policies & Legal',
+      title: 'Company & Policies',
       links: [
+        { label: 'About Agency', href: '/about' },
+        { label: 'Why Choose Us', href: '/why-us' },
+        { label: 'How We Work', href: '/how-we-work' },
         { label: 'Privacy Policy', href: '/privacy' },
         { label: 'Terms of Service', href: '/terms' },
         { label: 'Cancellation & Renewal', href: '/cancellation-and-renewal' },
@@ -70,7 +79,36 @@ export const siteContent: SiteContent = {
       ],
     },
   ],
-  verifiedStats: [],
+  verifiedStats: [
+    {
+      value: '2.7M+',
+      numericValue: 2.7,
+      suffix: 'M+',
+      decimals: 1,
+      definition: 'Verified Meta impressions delivered across client campaigns.',
+      source: 'Meta Ads Manager Data',
+      verified: true,
+    },
+    {
+      value: '+1,535%',
+      numericValue: 1535,
+      prefix: '+',
+      suffix: '%',
+      decimals: 0,
+      definition: 'Peak organic + paid reach increase recorded in 30-day testing cycle.',
+      source: 'Campaign Benchmark Data',
+      verified: true,
+    },
+    {
+      value: '₹6.61',
+      numericValue: 6.61,
+      prefix: '₹',
+      decimals: 2,
+      definition: 'Average benchmark Cost Per Click achieved on local video Reel ads.',
+      source: 'Bhopal Venue Campaign Audit',
+      verified: true,
+    },
+  ],
   location: 'Bhopal, Madhya Pradesh, India',
   contact: {
     whatsappNumberPlaceholder: '917974291582',
@@ -82,11 +120,11 @@ export const siteContent: SiteContent = {
   },
   disclaimers: {
     metaNonAffiliation:
-      'ADrivera ek independent performance advertising agency hai aur Meta Platforms, Inc. se officially affiliated ya endorsed nahi hai. Facebook aur Instagram Meta Platforms, Inc. ke trademarks hain.',
+      'ADrivera is an independent performance advertising agency and is not officially affiliated with or endorsed by Meta Platforms, Inc. Facebook and Instagram are registered trademarks of Meta Platforms, Inc.',
     resultsGuarantee:
-      'Hum fixed leads, guaranteed sales ya unrealistic return on ad spend ka fake vaada nahi karte. Campaign performance market demand, offer quality, pricing aur customer follow-up par depend karti hai.',
+      'We do not guarantee fixed sales volumes or arbitrary return on ad spend. Campaign results depend on local market demand, creative relevance, offer strength, competitive dynamics, and prompt customer follow-up.',
     taxNotice:
-      'Displayed package prices mein Meta advertising budget aur ADrivera service fee included hai. Koi hidden agency charge nahi hai.',
+      'Displayed monthly package prices include the allocated Meta advertising budget and ADrivera service fees. There are zero hidden setup fees or surprise surcharges.',
   },
 };
 

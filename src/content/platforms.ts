@@ -15,10 +15,10 @@ export interface FlowStep {
 }
 
 export const platformsData = {
-  eyebrow: '06 / Placements',
-  headline: 'Jahan Bhopal Ke Log Active Hain, Wahin Dikhega Aapka Business.',
+  eyebrow: '06 / Placement Architecture',
+  headline: 'Where Bhopal Pays Attention, Your Brand Dominates.',
   leadText:
-    'Aapke potential customers har roz ghanton Instagram aur Facebook scroll karte hain. Sahi placements aur ad formats ke saath aapka ad unke saamne sahi waqt par dikhaya ja sakta hai.',
+    'Your prospective customers spend hours every day scrolling Instagram and Facebook. With tailored aspect ratios and strategic placement mapping, your brand appears at the exact moment of highest user attention.',
   wireframes: [
     {
       id: 'feed',
@@ -26,15 +26,15 @@ export const platformsData = {
       aspectRatio: '4:5',
       format: 'In-Feed Sponsored Post',
       description:
-        'Feed placement jahan high-impact visuals aur clear headline se scrolling audience ka dhyan turant attract hota hai.',
+        'Native feed placement where high-contrast visual framing and compelling headline copy capture scrolling attention instantaneously.',
     },
     {
       id: 'stories',
       label: 'Instagram & Facebook Stories',
       aspectRatio: '9:16',
-      format: 'Full-Screen Story Ad',
+      format: 'Full-Screen Story Canvas',
       description:
-        'Full-screen vertical format jahan customer direct swipe ya message karke aapse seedha connect ho sakta hai.',
+        'Full-screen vertical immersion designed for direct interactive polls, quick swipe gestures, and rapid 1-on-1 message initiation.',
     },
     {
       id: 'reels',
@@ -42,37 +42,37 @@ export const platformsData = {
       aspectRatio: '9:16',
       format: 'Short-Form Video Reel',
       description:
-        'Fast-moving short video format jo local audience tak genuine engagement aur organic feel ke saath business ko pahunchata hai.',
+        'High-velocity video content favored by platform algorithms, delivering unmatched organic viral resonance and local engagement.',
     },
   ] as PlacementWireframe[],
   flowSteps: [
     {
       step: '01',
       category: 'Platform',
-      title: 'Ad Facebook / Instagram Par Dekha',
-      role: 'Advertising Platform',
+      title: 'Ad Viewed on Feed or Reels',
+      role: 'Discovery Canvas',
       description:
-        'Bhopal ke potential customers Feed, Stories ya Reels scroll karte waqt aapka ad dekhte hain.',
+        'Qualified local prospects in Bhopal encounter your high-definition sponsored ad while actively exploring their social feeds.',
     },
     {
       step: '02',
       category: 'Interaction',
-      title: 'Call-to-Action Par Tap Kiya',
-      role: 'Direct Action',
+      title: 'Prospect Taps Call-to-Action',
+      role: 'Intent Capture',
       description:
-        "Interested customer ad par diye gaye button ('WhatsApp Karein' ya 'Details Dekhein') par tap karta hai.",
+        'Engaged customers tap the verified action button ("Send WhatsApp Message" or "Claim Offer") with zero interstitial friction.',
     },
     {
       step: '03',
       category: 'Destination',
-      title: 'Direct WhatsApp Chat Shuru',
-      role: 'Customer Enquiry',
+      title: 'Direct 1-on-1 WhatsApp Chat',
+      role: 'Customer Conversion',
       description:
-        'Customer seedhe aapke WhatsApp par aata hai, jahan aap unki enquiry attend karke deal close kar sakte hain.',
+        'The prospect immediately lands in your verified WhatsApp business inbox with a pre-formatted message ready for immediate closing.',
     },
   ] as FlowStep[],
   placementNote:
-    'Har campaign ke liye har placement zaroori nahi hoti. Aapke business goal aur creative format ke hisaab se best placements select ki jaati hain.',
+    'Every campaign has a unique placement footprint. We curate the optimal blend of Feed, Stories, and Reels based strictly on your business targets and asset strengths.',
   distinctionNote:
-    'Meta Ads (Facebook aur Instagram) reach aur traffic create karte hain, jabki WhatsApp enquiries ko attend karne ka personal medium hai.',
+    'Meta Ads (Facebook & Instagram) generate high-intent traffic and market discovery, while WhatsApp provides the high-converting conversion channel.',
 };

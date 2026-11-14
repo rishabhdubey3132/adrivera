@@ -5,36 +5,36 @@ export interface ProcessStep {
 }
 
 export const processData = {
-  eyebrow: '07 / Process',
-  headline: 'Saaf Tareeka. Zero Guesswork.',
+  eyebrow: '07 / Strategic Framework',
+  headline: 'Systematic Execution. Zero Guesswork.',
   leadText:
-    'Pehle business aur target audience ko samjhenge, campaign plan karke live karenge, performance monitor karenge aur clean data ke basis par aage badhenge.',
+    'We follow an agile, four-phase operational framework designed to test what resonates with your local audience and scale campaign performance methodically.',
   steps: [
     {
       step: '01',
-      title: 'Step 1 — Understand',
+      title: 'Discovery & Market Alignment',
       description:
-        'Aapka business, offering, Bhopal ke target customers aur main advertising goals ko detail mein samjhenge.',
+        'We study your business offering, competitive landscape in Bhopal, and target customer profiles to establish clear, realistic campaign goals.',
     },
     {
       step: '02',
-      title: 'Step 2 — Plan aur Launch',
+      title: 'Creative Production & Launch',
       description:
-        'Sahi campaign objective, audience targeting, ad creatives, placements aur budget allocation ke saath campaign live karenge.',
+        'We develop high-impact ad creatives, configure precise geo-radius audience segments, and launch your campaign on Facebook and Instagram.',
     },
     {
       step: '03',
-      title: 'Step 3 — Monitor aur Improve',
+      title: 'Active Calibration & Testing',
       description:
-        'Package ke hisaab se ad performance ko track karenge aur zaroori improvements aur optimizations karenge.',
+        'We track live response data, optimize bid strategies, and adjust creative hooks to ensure maximum inquiry velocity for your budget.',
     },
     {
       step: '04',
-      title: 'Step 4 — Report aur Decide',
+      title: 'Transparent Reporting & Scaling',
       description:
-        'Report mein samjhenge ki spend kitna hua, reach kitni mili aur available data ke basis par aage kya step lena chahiye.',
+        'We review verified ad spend, unique reach, and customer actions with you, using clean data to guide your subsequent scaling decisions.',
     },
   ] as ProcessStep[],
   footnote:
-    'Campaign optimization data ke basis par improve karne ka process hai, bina kisi unreal sales guarantee ke.',
+    'Performance advertising is an evidence-based iterative discipline. We focus on continuous optimization rather than speculative sales promises.',
 };

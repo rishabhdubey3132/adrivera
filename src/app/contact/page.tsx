@@ -7,10 +7,10 @@ export default function ContactPage() {
     <PageShell>
       <PageIntro
         index="05"
-        eyebrow="Baat Karein"
-        headline="Aap business sambhaliye, online visibility hum sambhalenge."
-        description="Apne business, location aur goal ke baare mein batayiye. Hum evaluate karenge ki kaunsa campaign approach aapke liye suitable ho sakta hai."
-        quote="Aaj hi business se brand banne ka pehla kadam uthaiye."
+        eyebrow="Direct Consultation"
+        headline="You Run Your Operations. We Engineer Your Market Visibility."
+        description="Share your business profile, target customer base, and growth goals. We will audit your local market opportunity and recommend the highest-performing Meta Ads campaign structure."
+        quote="Take the decisive first step toward building an authoritative digital presence today."
       />
       <EnquirySection />
     </PageShell>

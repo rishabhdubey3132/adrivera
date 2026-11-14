@@ -5,53 +5,52 @@ export interface ServiceItem {
 }
 
 export const servicesData = {
-  eyebrow: '05 / Services',
-  headline: 'Hum sirf ads nahi chalate. Hum aapke business ko sahi logon tak pahunchane par focus karte hain.',
+  eyebrow: '05 / Core Capabilities',
+  headline: 'We Do Not Just Run Ads. We Engineer Local Market Dominance.',
   leadText:
-    'Pehle samjhenge aapka business, phir advertising plan banayenge. Campaign setup, creative, targeting aur regular optimization—sab agreed package ke hisaab se manage hoga.',
+    'From initial business positioning to creative production, audience calibration, and ongoing optimization, we handle every critical layer of your Meta advertising strategy.',
   items: [
     {
       number: '01',
-      title: 'Campaign planning',
+      title: 'Strategic Campaign Architecture',
       description:
-        'Pehle samjhenge aapka business, aapke customers aur aapka goal. Phir uske hisaab se advertising plan banayenge.',
+        'We study your business model, local customer buying habits, and specific revenue targets before architecting a tailor-made advertising roadmap.',
     },
     {
       number: '02',
-      title: 'Audience aur location targeting',
+      title: 'Precision Audience & Geo-Targeting',
       description:
-        'Har business ke customers alag hote hain. Isliye audience aur location ka selection aapke business aur campaign goal ke hisaab se kiya jayega.',
+        'Every business serves a distinct clientele. We deploy hyper-local radius targeting, demographic profiling, and interest filters tailored for Bhopal and regional markets.',
     },
     {
       number: '03',
-      title: 'Creative production',
+      title: 'High-Converting Creative Production',
       description:
-        'Aapke business ke liye aise ad creatives banane mein madad karenge jo aapki offering ko clearly dikhayein aur audience ka attention attract karein.',
+        'We design thumb-stopping 4:5 Feed visuals and captivating 9:16 short-form video Reels that highlight your unique offering and command viewer attention.',
     },
     {
       number: '04',
-      title: 'Campaign setup & configuration',
+      title: 'Technical Configuration & Meta Setup',
       description:
-        'Meta Ads Manager mein campaign objectives, placement settings, budget allocation aur destination tracking professionally configure karenge.',
+        'We professionally configure campaign objectives, placement hierarchies, budget allocation rules, and destination tracking within Meta Ads Manager.',
     },
     {
       number: '05',
-      title: 'Campaign optimization',
+      title: 'Data-Driven Campaign Optimization',
       description:
-        'Campaign ki performance ko monitor karke, package ke hisaab se, zaroori improvements kiye jayenge.',
+        'We monitor live campaign performance continuously—refining audience bid parameters, pruning fatigued creatives, and scaling winning ad sets.',
     },
     {
       number: '06',
-      title: 'Performance reporting',
+      title: 'Transparent Performance Analytics',
       description:
-        'Sirf numbers nahi—report mein samjhiye ki kitna spend hua, kitni reach mili, kitne clicks aaye aur available data kya indicate karta hai.',
+        'No vanity metrics or confusing agency jargon. You receive clear, honest monthly reports detailing exact ad spend, reach, click-through rates, and inquiry costs.',
     },
     {
       number: '07',
-      title: 'WhatsApp enquiries integration',
+      title: 'Direct WhatsApp Inquiry Integration',
       description:
-        'Jab aapke potential customers interested hon, toh unke liye WhatsApp par aapse contact karna aasaan banaiye.',
+        'Eliminate purchase friction. We direct interested local customers straight into 1-on-1 conversations on your official WhatsApp number for swift closing.',
     },
   ] as ServiceItem[],
 };
-

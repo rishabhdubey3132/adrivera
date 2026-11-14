@@ -9,35 +9,36 @@ export function SiteHeader() {
   const items: CardNavItem[] = [
     {
       label: 'Why Us',
-      description: 'Bhopal businesses ke liye targeted Meta Ads execution.',
+      description: 'Precision Meta Ads execution engineered for ambitious local businesses.',
       links: [
-        { label: 'Kyun Zaroori Hai', href: '/why-us' },
-        { label: 'Kaam Ka Tareeka', href: '/how-we-work' },
-        { label: 'Platforms Covered', href: '/#platforms' }
-      ]
+        { label: 'Why Choose Us', href: '/why-us' },
+        { label: 'How We Work', href: '/how-we-work' },
+        { label: 'Placement Framework', href: '/#our-approach' },
+      ],
     },
     {
       label: 'Packages',
-      description: 'Sirf ₹5,000/month se transparent Meta Ads plans.',
+      description: 'Start with a 7-day trial for ₹1,500 — or choose a full monthly plan from ₹5,000/month.',
       links: [
+        { label: 'Trial Plan (₹1,500 / 7 Days)', href: '/#pricing' },
         { label: 'Starter (₹5,000/mo)', href: '/#pricing' },
         { label: 'Growth (₹8,000/mo)', href: '/#pricing' },
         { label: 'Premium (₹16,000/mo)', href: '/#pricing' },
-        { label: 'Custom (₹30,000+/mo)', href: '/#pricing' }
-      ]
+        { label: 'Custom Enterprise (₹30,000+/mo)', href: '/#pricing' },
+      ],
     },
     {
       label: 'Contact',
-      description: 'Direct communication & fast onboarding on WhatsApp.',
+      description: 'Fast onboarding and direct strategic consultation on WhatsApp.',
       links: [
         {
-          label: 'WhatsApp Chat',
-          href: 'https://wa.me/917974291582?text=Namaste%20ADrivera%20team%2C%20main%20Meta%20Ads%20ke%20baare%20mein%20baat%20karna%20chahta%20hoon.'
+          label: 'Direct WhatsApp Chat',
+          href: 'https://wa.me/917974291582?text=Hello%20ADrivera%20team%2C%20I%20would%20like%20to%20discuss%20Meta%20Ads%20for%20my%20business.',
         },
-        { label: 'Online Enquiry', href: '/contact' },
-        { label: 'About Agency', href: '/about' }
-      ]
-    }
+        { label: 'Request Consultation', href: '/contact' },
+        { label: 'About Agency', href: '/about' },
+      ],
+    },
   ];
 
   const logoNode = (
@@ -52,7 +53,7 @@ export function SiteHeader() {
           logoAlt={siteContent.brandName}
           logoHref="/"
           items={items}
-          cta={{ label: 'Plans Dekhein', href: '/#pricing' }}
+          cta={{ label: 'View Pricing', href: '/#pricing' }}
           cardEffect="rise"
           openOn="click"
           surface="glass"

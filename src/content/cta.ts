@@ -1,15 +1,15 @@
 export const finalCtaData = {
-  eyebrow: '12 / Next Step',
-  headline: 'Aaj hi business se brand banne ka pehla kadam uthaiye.',
-  hinglishLead: 'Aapka agla customer shayad abhi aapko jaanta bhi nahi.',
+  eyebrow: '13 / Take Action',
+  headline: 'Transform Your Business Into an Iconic Regional Brand Today.',
+  leadText: 'Your next hundred customers are scrolling right now. Let them discover you.',
   supportingCopy:
-    'Aapka business grow kar sakta hai. Use sahi audience tak pahunchane ki shuruaat kijiye—sirf ₹5,000 per month se.',
+    'Stop relying solely on unpredictable foot traffic. Build a dependable, measurable inquiry pipeline with professionally managed Meta Ads starting at just ₹5,000 per month.',
   primaryCta: {
-    label: 'Apna Plan Chunein',
+    label: 'View Pricing & Packages',
     href: '/#pricing',
   },
   secondaryCta: {
-    label: 'WhatsApp Par Baat Karein',
-    href: 'https://wa.me/917974291582?text=Namaste%20ADrivera%20team%2C%20main%20apne%20business%20ke%20liye%20Meta%20Ads%20ke%20baare%20mein%20baat%20karna%20chahta%20hoon.',
+    label: 'Chat Directly on WhatsApp',
+    href: 'https://wa.me/917974291582?text=Hello%20ADrivera%20team%2C%20I%20would%20like%20to%20discuss%20Meta%20Ads%20for%20my%20business.',
   },
 };

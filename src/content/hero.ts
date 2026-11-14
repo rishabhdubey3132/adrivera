@@ -1,27 +1,32 @@
 export const heroData = {
-  eyebrow: 'Meta Ads in Bhopal · Facebook & Instagram',
-  headline: 'Aapke Business Mein Dum Hai, Ab Use Sahi Audience Tak Phauchane ka Kaam hamara',
+  eyebrow: 'Meta Performance Ads · Facebook & Instagram Partner',
+  headline: 'Turn Local Attention Into Measurable Revenue, Engineered for Growth.',
   supportingCopy:
-    'ADrivera ke saath Facebook aur Instagram par apne business ki advertising shuru kijiye. Sahi audience tak pahunchne, enquiries badhane aur apne business ko ek pehchaan dene ki direction mein pehla kadam uthaiye.',
-  secondaryHinglishLine: 'Aap business sambhaliye, online visibility hum sambhalenge.',
+    'We build, test, and scale high-converting Meta Ad campaigns for ambitious local businesses in Bhopal and across Central India. From high-impact Reels and Feed creatives to direct customer inquiries on WhatsApp, we handle end-to-end advertising with unmatched precision.',
+  secondaryTagline: 'You focus on your operations. We manage your customer acquisition and market visibility.',
   primaryCta: {
-    label: 'Plans Dekhein',
-    href: '/pricing',
+    label: 'Explore Transparent Plans',
+    href: '#pricing',
   },
   secondaryCta: {
-    label: 'WhatsApp Par Baat Karein',
+    label: 'Chat on WhatsApp',
     href: '#contact',
   },
   microcopy:
-    'Transparent monthly pricing. Ad spend included. Realistic performance, no fake promises.',
+    'Trial from ₹1,500 for 7 days. Monthly packages from ₹5,000. Meta ad spend included. Zero hidden fees.',
+  metrics: [
+    { value: 2.7, suffix: 'M+', label: 'Total Views Generated', decimals: 1 },
+    { value: 1535, prefix: '+', suffix: '%', label: 'Peak Reach Surge' },
+    { value: 45, suffix: '+', label: 'Active Local Campaigns' },
+    { value: 1500, prefix: '₹', suffix: '', label: '7-Day Trial Plan' },
+  ],
   diagram: {
-    label: 'Illustrative Advertising Workflow',
+    label: 'Performance Advertising Funnel',
     steps: [
-      { id: '1', title: 'Target Audience in Bhopal', desc: 'Sahi radius aur interest parameters' },
-      { id: '2', title: 'Meta Feed & Reels', desc: 'Facebook aur Instagram ad creatives' },
-      { id: '3', title: 'Direct Customer Action', desc: 'WhatsApp enquiries aur direct calls' },
-      { id: '4', title: 'Performance Review', desc: 'Spend vs actual outcome data' },
+      { id: '1', title: 'Audience Targeting', desc: 'Precision local radius, demographic & interest mapping' },
+      { id: '2', title: 'Creative Production', desc: 'High-impact 4:5 Feed posts & 9:16 immersive Reels' },
+      { id: '3', title: 'Direct Customer Action', desc: '1-on-1 WhatsApp inquiries and direct inbound calls' },
+      { id: '4', title: 'Weekly Optimization', desc: 'Continuous ad spend calibration based on real performance' },
     ],
   },
 };
-

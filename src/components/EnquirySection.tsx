@@ -10,6 +10,8 @@ import {
 } from '@/content/enquiry';
 import { siteConfig } from '@/content/site';
 import { ScrollReveal } from './ScrollReveal';
+import { WhatsAppIcon } from './ui/WhatsAppIcon';
+import { ArrowRight, Sparkles, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export function EnquirySection() {
   const [formData, setFormData] = useState<EnquiryFormData>({
@@ -82,18 +84,18 @@ export function EnquirySection() {
     const newErrors: Partial<Record<keyof EnquiryFormData, string>> = {};
 
     if (!formData.businessName.trim()) {
-      newErrors.businessName = 'Kripya apne business ya venture ka naam darj karein.';
+      newErrors.businessName = 'Please enter your business or venture name.';
     }
     if (!formData.location.trim()) {
-      newErrors.location = 'Kripya apne business ki location ya area batayein.';
+      newErrors.location = 'Please specify your business location or area.';
     }
     if (!formData.contactName.trim()) {
-      newErrors.contactName = 'Kripya apna naam darj karein.';
+      newErrors.contactName = 'Please enter your contact name.';
     }
 
     const cleanPhone = formData.phone.replace(/[\s\-\+]/g, '');
     if (!cleanPhone || cleanPhone.length < 10) {
-      newErrors.phone = 'Kripya sahi 10-digit phone ya WhatsApp number darj karein.';
+      newErrors.phone = 'Please enter a valid 10-digit phone or WhatsApp number.';
     }
 
     setErrors(newErrors);
@@ -128,21 +130,19 @@ export function EnquirySection() {
   };
 
   return (
-    <section id="enquiry" className="py-20 sm:py-24 md:py-28 border-b border-border bg-bg scroll-mt-20">
-      <div className="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="enquiry" className="py-20 sm:py-24 md:py-28 border-b border-border bg-bg scroll-mt-20 relative overflow-hidden">
+      <div className="max-w-site mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
           <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="inline-block text-xs font-semibold uppercase tracking-eyebrow text-muted mb-4 font-mono">
-              11 / Shuru Kijiye
+            <span className="mb-3 inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-eyebrow text-accent bg-tint/60 dark:bg-card border border-accent/20">
+              <Sparkles className="w-3.5 h-3.5" />
+              11 / Launch Your Campaign
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-ink tracking-tighter leading-tight mb-4">
-              Apne Business Ke Baare Mein Batayein
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-ink dark:text-white tracking-tighter leading-tight mb-4">
+              Tell Us About Your Business
             </h2>
-            <p className="text-accent text-base sm:text-lg font-medium leading-snug mb-3">
-              Agar aapko lagta hai ki aapka business aur grow kar sakta hai, toh shuruaat aaj hi kijiye.
-            </p>
-            <p className="text-muted text-base leading-relaxed">
-              Form bhariye aur details seedhe WhatsApp par bhejiye. Hum aapke business aur goals ke hisaab se Meta Ads approach discuss karenge.
+            <p className="text-muted text-base sm:text-lg leading-relaxed">
+              Complete the quick brief below to receive a personalized advertising strategy directly on WhatsApp. We will evaluate your market opportunity and discuss recommended campaign parameters.
             </p>
           </div>
         </ScrollReveal>
@@ -154,15 +154,15 @@ export function EnquirySection() {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="border border-border bg-card p-6 sm:p-10 rounded-none shadow-none space-y-6"
+                className="rounded-2xl border border-border bg-card p-6 sm:p-10 shadow-xs space-y-6"
               >
                 {/* Business Name */}
                 <div>
                   <label
                     htmlFor="businessName"
-                    className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                    className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                   >
-                    Aapke Business Ka Naam <span className="text-accent">*</span>
+                    Business / Brand Name <span className="text-accent">*</span>
                   </label>
                   <input
                     type="text"
@@ -172,8 +172,8 @@ export function EnquirySection() {
                     onChange={handleChange}
                     aria-invalid={!!errors.businessName}
                     aria-describedby={errors.businessName ? 'businessName-error' : undefined}
-                    placeholder="Jaise: Malwa Organic Foods / City Dental Care"
-                    className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-none text-ink placeholder:text-muted/60 focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+                    placeholder="e.g. Malwa Organic Foods / City Dental Care"
+                    className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-xl text-ink dark:text-white placeholder:text-muted/60 focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent ${
                       errors.businessName ? 'border-red-600' : 'border-border'
                     }`}
                   />
@@ -184,22 +184,21 @@ export function EnquirySection() {
                   )}
                 </div>
 
-                {/* Category & Location (2-col grid) */}
+                {/* Category & Location */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Category */}
                   <div>
                     <label
                       htmlFor="category"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
-                      Business Ki Category <span className="text-accent">*</span>
+                      Industry Category <span className="text-accent">*</span>
                     </label>
                     <select
                       id="category"
                       name="category"
                       value={formData.category}
                       onChange={handleChange}
-                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-none text-ink focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-xl text-ink dark:text-white focus:outline-none focus:border-accent"
                     >
                       {businessCategories.map((cat) => (
                         <option key={cat.value} value={cat.value}>
@@ -209,13 +208,12 @@ export function EnquirySection() {
                     </select>
                   </div>
 
-                  {/* Location */}
                   <div>
                     <label
                       htmlFor="location"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
-                      Location (Bhopal Mein Kahan) <span className="text-accent">*</span>
+                      Operating Location <span className="text-accent">*</span>
                     </label>
                     <input
                       type="text"
@@ -225,8 +223,8 @@ export function EnquirySection() {
                       onChange={handleChange}
                       aria-invalid={!!errors.location}
                       aria-describedby={errors.location ? 'location-error' : undefined}
-                      placeholder="Jaise: Arera Colony, MP Nagar, Bhopal"
-                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-none text-ink placeholder:text-muted/60 focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+                      placeholder="e.g. Arera Colony, MP Nagar, Bhopal"
+                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-xl text-ink dark:text-white placeholder:text-muted/60 focus:outline-none focus:border-accent ${
                         errors.location ? 'border-red-600' : 'border-border'
                       }`}
                     />
@@ -238,22 +236,21 @@ export function EnquirySection() {
                   </div>
                 </div>
 
-                {/* Objective & Preferred Plan (2-col grid) */}
+                {/* Objective & Preferred Plan */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Primary Objective */}
                   <div>
                     <label
                       htmlFor="objective"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
-                      Aapka Main Goal <span className="text-accent">*</span>
+                      Primary Growth Goal <span className="text-accent">*</span>
                     </label>
                     <select
                       id="objective"
                       name="objective"
                       value={formData.objective}
                       onChange={handleChange}
-                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-none text-ink focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-xl text-ink dark:text-white focus:outline-none focus:border-accent"
                     >
                       {primaryObjectives.map((obj) => (
                         <option key={obj.value} value={obj.value}>
@@ -263,20 +260,19 @@ export function EnquirySection() {
                     </select>
                   </div>
 
-                  {/* Preferred Plan */}
                   <div>
                     <label
                       htmlFor="preferredPlan"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
-                      Kaunsa Plan Dekhna Chahte Hain <span className="text-accent">*</span>
+                      Target Package Tier <span className="text-accent">*</span>
                     </label>
                     <select
                       id="preferredPlan"
                       name="preferredPlan"
                       value={formData.preferredPlan}
                       onChange={handleChange}
-                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-none text-ink focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                      className="w-full min-h-[48px] px-4 text-sm bg-bg border border-border rounded-xl text-ink dark:text-white focus:outline-none focus:border-accent"
                     >
                       {planOptions.map((plan) => (
                         <option key={plan.value} value={plan.value}>
@@ -287,15 +283,14 @@ export function EnquirySection() {
                   </div>
                 </div>
 
-                {/* Contact Name & Phone (2-col grid) */}
+                {/* Contact Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Contact Name */}
                   <div>
                     <label
                       htmlFor="contactName"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
-                      Aapka Naam <span className="text-accent">*</span>
+                      Your Name <span className="text-accent">*</span>
                     </label>
                     <input
                       type="text"
@@ -305,8 +300,8 @@ export function EnquirySection() {
                       onChange={handleChange}
                       aria-invalid={!!errors.contactName}
                       aria-describedby={errors.contactName ? 'contactName-error' : undefined}
-                      placeholder="Jaise: Rajesh Sharma"
-                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-none text-ink placeholder:text-muted/60 focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+                      placeholder="e.g. Rajesh Sharma"
+                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-xl text-ink dark:text-white placeholder:text-muted/60 focus:outline-none focus:border-accent ${
                         errors.contactName ? 'border-red-600' : 'border-border'
                       }`}
                     />
@@ -317,11 +312,10 @@ export function EnquirySection() {
                     )}
                   </div>
 
-                  {/* Phone */}
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink mb-2"
+                      className="block text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white mb-2"
                     >
                       WhatsApp / Phone Number <span className="text-accent">*</span>
                     </label>
@@ -333,8 +327,8 @@ export function EnquirySection() {
                       onChange={handleChange}
                       aria-invalid={!!errors.phone}
                       aria-describedby={errors.phone ? 'phone-error' : undefined}
-                      placeholder="Jaise: 98260 00000"
-                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-none text-ink placeholder:text-muted/60 focus:outline-none focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+                      placeholder="e.g. 98260 00000"
+                      className={`w-full min-h-[48px] px-4 text-sm bg-bg border rounded-xl text-ink dark:text-white placeholder:text-muted/60 focus:outline-none focus:border-accent ${
                         errors.phone ? 'border-red-600' : 'border-border'
                       }`}
                     />
@@ -350,61 +344,63 @@ export function EnquirySection() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group relative flex h-12 w-full items-center justify-center overflow-hidden rounded-md bg-linear-to-r bg-gradient-to-r dark:from-[#070e41] dark:to-[#263381] from-[#f6f7ff] to-[#f5f6ff] dark:border-[rgb(76_100_255)] border-2 border-[#263381] px-6 font-medium text-foreground dark:text-white transition-all duration-100 hover:[box-shadow:5px_5px_rgb(38_51_129)] translate-x-[3px] hover:translate-x-[0px] translate-y-[3px] hover:translate-y-[0px] [box-shadow:0px_0px_rgb(38_51_129)] dark:hover:[box-shadow:5px_5px_rgb(76_100_255)] dark:active:[box-shadow:0px_0px_rgb(76_100_255)] active:[box-shadow:0px_0px_rgb(38_51_129)] active:translate-y-[3px] active:translate-x-[3px] cursor-pointer"
+                    className="group relative flex h-13 w-full items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-gradient-to-r from-[#1E4BD9] to-[#285BFF] hover:from-[#1A42C5] hover:to-[#2250EA] px-6 font-semibold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                   >
-                    WhatsApp Par Details Bhejein
+                    <WhatsAppIcon className="w-5 h-5 text-[#25D366] shrink-0" />
+                    <span>Send Brief on WhatsApp</span>
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
 
-                {/* Inline Privacy Note */}
+                {/* Privacy Note */}
                 <div className="pt-3 border-t border-border flex items-start gap-2.5 text-xs text-muted">
-                  <span className="w-1.5 h-1.5 bg-ink/40 inline-block mt-1 flex-shrink-0" />
+                  <ShieldCheck className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                   <p className="leading-relaxed">
-                    <span className="font-semibold text-ink">Privacy Guarantee: </span>
-                    Aapki details hamari website par store nahi hoti hain. Ye form sirf ek formatted message banakar WhatsApp open karta hai taaki control aapke haath mein rahe.
+                    <span className="font-semibold text-ink dark:text-white">Privacy Guarantee: </span>
+                    Your details are never sold or stored on external servers. This form formats an immediate message directly to our official WhatsApp business channel for complete transparency.
                   </p>
                 </div>
               </form>
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Information & Plain-Text Fallback Block */}
+          {/* Right Column: Process Guide */}
           <div className="lg:col-span-5 space-y-6">
             <ScrollReveal delayMs={100}>
-              <div className="border border-border bg-card p-6 sm:p-8 rounded-none">
+              <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-xs">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-muted block mb-2">
-                  Agla Kadam Kya Hoga?
+                  What Happens Next?
                 </span>
-                <h3 className="font-heading font-extrabold text-xl text-ink tracking-tight mb-4">
-                  Enquiry Ke Baad Process Kaise Chalega
+                <h3 className="font-heading font-extrabold text-xl text-ink dark:text-white tracking-tight mb-5">
+                  How We Process Your Campaign Inquiry
                 </h3>
 
-                <ul className="space-y-3.5 text-xs sm:text-sm text-ink/85 mb-6">
+                <ul className="space-y-4 text-xs sm:text-sm text-ink/85 dark:text-gray-300 mb-6">
                   <li className="flex items-start gap-3">
                     <span className="font-mono text-xs font-bold text-accent flex-shrink-0 mt-0.5">01</span>
-                    <span>Hum aapki business category, Bhopal ke target customers aur advertising goals ko samjhenge.</span>
+                    <span>We evaluate your industry category, competitive presence in Bhopal, and target commercial objectives.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-mono text-xs font-bold text-accent flex-shrink-0 mt-0.5">02</span>
-                    <span>Aapke budget aur offer ke hisaab se sahi Meta Ads strategy aur creative format suggest karenge.</span>
+                    <span>We suggest an optimal mix of creative formats (video Reels vs. static Feed) aligned with your budget.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-mono text-xs font-bold text-accent flex-shrink-0 mt-0.5">03</span>
-                    <span>Campaign live hone se pehle clear ad budget aur timeline aapke saath finalize ki jayegi.</span>
+                    <span>Exact budget allocation, ad deliverables, and launch timeline are mutually confirmed before going live.</span>
                   </li>
                 </ul>
 
-                <div className="p-4 bg-bg border border-border text-xs text-muted leading-relaxed">
-                  <span className="font-semibold text-ink">ADrivera Assurance: </span>
-                  Koi hidden agency charges nahi, koi fake sales promises nahi, aur clean transparent reporting.
+                <div className="p-4 rounded-xl bg-bg border border-border text-xs text-muted leading-relaxed">
+                  <span className="font-semibold text-ink dark:text-white">ADrivera Commitment: </span>
+                  Zero hidden agency markups, zero unrealistic sales guarantees, and 100% verified platform analytics.
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Plain-text Fallback Composed Message Block */}
+            {/* Formatted Message Fallback */}
             {composedMessage && (
               <ScrollReveal delayMs={140}>
-                <div className="border border-border bg-card p-6 sm:p-8 rounded-none">
+                <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-xs">
                   <div className="flex items-center justify-between mb-3 pb-3 border-b border-border">
                     <span className="font-mono text-xs font-bold uppercase tracking-wider text-accent">
                       Formatted Message Preview
@@ -412,18 +408,18 @@ export function EnquirySection() {
                     <button
                       type="button"
                       onClick={handleCopy}
-                      className="px-3 py-1.5 text-xs font-mono font-semibold text-ink border border-ink hover:bg-tint/50 active:bg-tint transition-colors rounded-[2px]"
+                      className="px-3 py-1.5 text-xs font-mono font-semibold text-ink dark:text-white border border-border hover:bg-tint/50 transition-colors rounded-md"
                     >
-                      {copied ? 'Copied!' : 'Message Copy Karein'}
+                      {copied ? 'Copied to Clipboard!' : 'Copy Message'}
                     </button>
                   </div>
 
-                  <pre className="font-mono text-xs text-ink/90 whitespace-pre-wrap bg-bg p-4 border border-border/80 leading-relaxed max-h-60 overflow-y-auto">
+                  <pre className="font-mono text-xs text-ink/90 dark:text-gray-200 whitespace-pre-wrap bg-bg p-4 rounded-lg border border-border/80 leading-relaxed max-h-60 overflow-y-auto">
                     {composedMessage}
                   </pre>
 
                   <p className="mt-3 text-[11px] font-mono text-muted">
-                    Agar WhatsApp automatically open nahi hua, toh ye message copy karke WhatsApp par bhej dijiye.
+                    If WhatsApp does not launch automatically, copy this message and send it directly to our number.
                   </p>
                 </div>
               </ScrollReveal>

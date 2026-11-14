@@ -9,9 +9,9 @@ export default function AboutPage() {
       <PageIntro
         index="04"
         eyebrow="About ADrivera"
-        headline="Sirf business mat chalao, apna brand banao."
-        description="ADrivera local businesses ke liye ek independent Meta advertising partner hai. Clear communication, transparent reporting aur honest advertising expectations ke saath kaam karte hain."
-        quote="Aaj local ho, kal apne sheher ka jaana-maana brand banne ki direction mein badho."
+        headline="Do Not Just Run a Business. Build an Enduring Brand."
+        description="ADrivera is a dedicated Meta Ads partner engineered for ambitious local and regional businesses. We operate with radical transparency, realistic commercial benchmarks, and relentless performance optimization."
+        quote="Transform your local footprint into your city's most recognized and respected commercial brand."
       />
       <BrandSection />
       <TrustSection />

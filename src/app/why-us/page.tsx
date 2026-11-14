@@ -10,10 +10,10 @@ export default function WhyUsPage() {
     <PageShell>
       <PageIntro
         index="01"
-        eyebrow="Kyun Zaroori Hai"
-        headline="Business aur brand mein farak sirf product ka nahi, pehchaan ka bhi hota hai."
-        description="Ek hi market mein kai businesses similar products aur services offer karte hain. Lekin kuch businesses zyada logon ko yaad rehte hain, kyunki unki pehchaan aur visibility strong hoti hai. Meta Ads aapke business ko naye logon tak pahunchane mein madad karte hain."
-        quote="Aapka business. Aapki pehchaan. Aapka brand."
+        eyebrow="The Strategic Imperative"
+        headline="The Difference Between an Ordinary Venture and an Iconic Brand is Mindshare."
+        description="Multiple businesses offer similar products and services within the same market. Yet only a select few command customer trust and pricing power—because their market visibility is persistent, professional, and memorable."
+        quote="Your Vision. Your Offering. Your Enduring Brand."
       />
       <BrandSection useSerifHeadline />
       <ServicesSection />

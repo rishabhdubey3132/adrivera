@@ -15,7 +15,6 @@ export function StickyMobileCta() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Hide when the enquiry section is intersecting the viewport
         setIsVisible(!entry.isIntersecting);
       },
       {
@@ -33,35 +32,35 @@ export function StickyMobileCta() {
   const whatsAppUrl = `https://wa.me/${
     siteConfig.contact.whatsappNumberPlaceholder
   }?text=${encodeURIComponent(
-    'Namaste ADrivera team, main apne business ke liye Meta advertising (Facebook & Instagram) ke baare mein baat karna chahta hoon.'
+    'Hello ADrivera team, I am interested in exploring Meta advertising (Facebook & Instagram) for my business.'
   )}`;
 
   return (
     <aside
       aria-label="Mobile Contact Action"
-      className={`md:hidden fixed bottom-0 left-0 right-0 z-40 bg-card border-t border-border p-3 transition-transform duration-300 ease-in-out ${
+      className={`md:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur-md border-t border-border p-3 transition-transform duration-300 ease-in-out shadow-lg ${
         isVisible ? 'translate-y-0' : 'translate-y-full pointer-events-none'
       }`}
       style={{
         paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))',
       }}
     >
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2.5">
         <a
           href={whatsAppUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 min-h-[48px] px-4 text-sm font-semibold text-white bg-accent hover:bg-[#1E4BD9] active:bg-[#153BB8] rounded-none transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+          className="flex-1 flex items-center justify-center gap-2 min-h-[46px] px-4 text-xs font-semibold text-white bg-accent hover:bg-[#1E4BD9] active:bg-[#153BB8] rounded-xl transition-all shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         >
-          <WhatsAppIcon className="w-5 h-5 text-white shrink-0" />
-          <span>WhatsApp Par Baat Karein</span>
+          <WhatsAppIcon className="w-4 h-4 text-white shrink-0" />
+          <span>Chat on WhatsApp</span>
         </a>
 
         <a
           href="/#pricing"
-          className="flex items-center justify-center min-h-[48px] px-4 text-xs font-mono font-bold uppercase tracking-wider text-ink border border-border bg-bg hover:bg-bg/80 active:bg-border/40 rounded-none transition-colors"
+          className="flex items-center justify-center min-h-[46px] px-4 text-xs font-mono font-bold uppercase tracking-wider text-ink dark:text-white border border-border bg-bg hover:bg-tint/40 rounded-xl transition-colors"
         >
-          Plan Chunein
+          View Plans
         </a>
       </div>
     </aside>

@@ -10,10 +10,10 @@ export default function HowWeWorkPage() {
     <PageShell>
       <PageIntro
         index="02"
-        eyebrow="Kaam Ka Tareeka"
-        headline="Experience se seekha. Data ke saath improve karte hain."
-        description="Hum sirf ads nahi chalate. Pehle aapka business, offerings aur Bhopal ke target customers ko samajhte hain, sahi audience target karte hain aur clean data ke saath campaigns improve karte hain."
-        quote="Views se lekar enquiries tak—advertising data aur strategy ke saath chalti hai."
+        eyebrow="Operational Methodology"
+        headline="Grounded in Experience. Accelerated by Real-Time Platform Data."
+        description="We do not just run ads. We analyze your commercial strengths, profile target customer intent in Bhopal, deploy thumb-stopping creative assets, and calibrate campaigns continuously using transparent performance data."
+        quote="From initial impression to verified WhatsApp inquiry—strategy backed by evidence."
       />
       <ProcessSection />
       <PlatformsSection />

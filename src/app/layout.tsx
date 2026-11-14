@@ -1,48 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter, Manrope, IBM_Plex_Mono, Noto_Sans_Devanagari } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/content/site';
-import { cn } from "@/lib/utils";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { ThemeProvider } from '@/components/ThemeProvider';
-
-
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-  weight: ['400', '500', '600'],
-  preload: true,
-  fallback: ['system-ui', 'sans-serif'],
-});
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
-  display: 'swap',
-  weight: ['600', '800'],
-  preload: true,
-  fallback: ['system-ui', 'sans-serif'],
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-  weight: ['400', '500'],
-  preload: false,
-  fallback: ['ui-monospace', 'monospace'],
-});
-
-const notoDevanagari = Noto_Sans_Devanagari({
-  subsets: ['devanagari'],
-  variable: '--font-hindi',
-  display: 'swap',
-  weight: ['400', '500'],
-  preload: false,
-  fallback: ['sans-serif'],
-});
 
 const siteUrl = 'https://adrivera.store';
 
@@ -153,9 +113,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(inter.variable, manrope.variable, ibmPlexMono.variable, notoDevanagari.variable)}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
         <meta name="color-scheme" content="light" />
         <meta name="darkreader-lock" content="true" />
         {/* Google-compliant Favicon Tags */}
